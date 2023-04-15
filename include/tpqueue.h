@@ -17,7 +17,7 @@ class TPQueue {
             return;
         }
         for (int i = head + fullness; i > head; i--) {
-            if (arr[(i - 1) % size].pr <= arr[(i) % size].pr) {
+            if (arr[(i - 1) % size].prior <= arr[(i) % size].prior) {
                 T temp = arr[(i - 1) % size];
                 arr[(i - 1) % size] = arr[(i) % size];
                 arr[(i) % size] = temp;
@@ -28,11 +28,10 @@ class TPQueue {
     TPQueue() :head(0), tail(0), fullness(0) {}
     void push(const T& value) {
         if (fullness == size) {
-            throw std::string("Already full Queue");
             return;
         }
         arr[(tail++) % size] = value;
-        QueueSort(value);
+        QueueSort();
         fullness++;
         return;
     }
