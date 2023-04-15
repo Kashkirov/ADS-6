@@ -11,7 +11,7 @@ class TPQueue {
     int head;
     int tail;
     int fullness;
-    T arr[size];
+    T arr[5];
     void QueueSort() {
         if (this->fullness < 2) {
             return;
