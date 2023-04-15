@@ -24,7 +24,7 @@ class TPQueue {
             }
         }
     }
-    
+
  public:
     TPQueue() :head(0), tail(0), fullness(0) {}
     void push(const T& value) {
